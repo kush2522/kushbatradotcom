@@ -24,8 +24,8 @@ export default function ContactCTA() {
             Open to the next leadership challenge.
           </h2>
           <p className="mt-4 text-mist-400 max-w-xl mx-auto">
-            Reach out about Director / VP Technology roles in AI engineering,
-            platform engineering or cloud leadership — or just to talk shop.
+            Reach out about Director / Head roles in Generative AI, AI platforms,
+            platform engineering or developer productivity — or just to talk shop.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link

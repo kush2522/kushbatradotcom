@@ -1,25 +1,26 @@
 export const profile = {
   name: "Kush Batra",
   initials: "KB",
-  title: "Director / VP Technology",
+  title: "Director, Generative AI & Engineering",
   subtitle: "AI & Engineering · Platform & Cloud · DevOps/SRE",
   location: "Bengaluru, India",
-  availability: "Open to India & global leadership opportunities",
+  availability: "Available immediately for Director / Head roles",
   email: "er.kushbatra@gmail.com",
-  linkedin: "https://www.linkedin.com/in/kushbatra-86578444",
+  linkedin: "https://www.linkedin.com/in/kush-batra",
   phone: "+91 72041 89357",
   heroStat: "16+ years turning emerging technology into production-grade engineering impact.",
   summary: [
-    "Technology and engineering leader with 16+ years of experience building and transforming software engineering, enterprise platforms, cloud infrastructure, SRE/DevOps and AI capabilities across large-scale organizations.",
-    "Most recently served as Director, Generative AI & Engineering at Capital One, leading global initiatives across AI-powered software engineering, developer platforms, enterprise knowledge systems and engineering automation — translating emerging technologies into secure, scalable, production-ready capabilities.",
-    "Combines strategic technology leadership with deep hands-on engineering expertise across AI/ML, cloud architecture, Kubernetes, platform engineering, distributed systems, DevOps/SRE and application platforms. Built and scaled AI capabilities reaching 16,000+ engineers and delivered $1.8M+ annualized infrastructure savings.",
+    "Engineering and technology leader with 16+ years across Generative AI, platform engineering, cloud infrastructure, SRE/DevOps and enterprise data platforms, in large-scale and regulated organizations.",
+    "Most recently Director, Generative AI & Engineering at Capital One, leading Engineering, DevOps and MLE teams on enterprise AI programs — taking AI from experiment to secure, governed, production-ready capability with reusable architectures, evaluation, observability and adoption models.",
+    "Combines strategic leadership with hands-on depth in AI/ML, RAG, cloud architecture, Kubernetes, distributed systems and DevOps/SRE. Delivered enterprise AI capabilities adopted by 30,000+ users, a code-review platform spanning 50,000+ repositories, and $1.8M+ monthly infrastructure savings.",
+    "I partner with CTOs and senior technology leaders, manage managers, hire and mentor strong engineers, and stay hands-on in architecture, design and technology choices.",
   ],
 };
 
 export const stats = [
   { label: "Years in technology leadership", value: "16+" },
-  { label: "Engineers reached with AI tooling", value: "16,000+" },
-  { label: "Annualized infrastructure savings delivered", value: "$1.8M+" },
+  { label: "Engineers reached with AI tooling", value: "30,000+" },
+  { label: "Monthly infrastructure savings delivered", value: "$1.8M+" },
   { label: "Provisioning turnaround, days to", value: "~1 hr" },
 ];
 
@@ -34,6 +35,7 @@ export const expertiseGroups = [
       "0→1 Product Development",
       "Engineering Operating Models",
       "Technical Roadmaps",
+      "Team Management",
       "Executive Stakeholder Management",
     ],
   },
@@ -50,6 +52,7 @@ export const expertiseGroups = [
       "Developer Knowledge Systems",
       "Enterprise AI Adoption",
       "AI Governance",
+      "Data Governance",
     ],
   },
   {
@@ -63,6 +66,7 @@ export const expertiseGroups = [
       "GCP",
       "Platform Engineering",
       "Infrastructure as Code",
+      "Terraform",
       "APIs",
       "Distributed Systems",
       "Microservices",
@@ -86,6 +90,9 @@ export const expertiseGroups = [
   {
     title: "Application & Data",
     items: [
+      "Apache Spark",
+      "Kafka",
+      "Databricks",
       "PostgreSQL",
       "Supabase",
       "OpenSearch",
@@ -110,73 +117,76 @@ export const experience: ExperienceEntry[] = [
   {
     company: "Capital One",
     role: "Director, Generative AI & Engineering",
-    period: "2026 — Present",
-    location: "Bengaluru / Global",
+    period: "Aug 2026 — Oct 2026",
+    location: "Bengaluru, India",
     points: [
-      "Lead a portfolio of enterprise AI and engineering initiatives spanning AI-powered code review, intelligent engineering assistants, enterprise knowledge platforms and AI developer tooling.",
-      "Define technical strategy and architecture across scalability, security, governance, developer experience and production reliability.",
-      "Lead cross-functional MLE, Engineering, Platform Engineering and DevOps teams, partnering with senior technology and CTO leadership across the US and India.",
-      "Architected a production engineering knowledge platform combining AWS EKS, OpenSearch, semantic retrieval, reranking, LLMs and historical support knowledge.",
-      "Led secure enterprise integration of Claude Code CLI with AWS Bedrock via API Gateway and OAuth, coordinating Engineering, Cybersecurity, Risk, Compliance, Architecture and Platform teams.",
+      "Led Engineering, DevOps and MLE teams across three enterprise AI programs, partnering with senior technology leadership, Risk, Cyber and the Model Risk Office on priorities, governance and adoption.",
+      "Defined engineering strategy for AI-powered developer experience and enterprise GenAI capabilities, shaping roadmaps with global ML and engineering leadership.",
+      "Contributed to the CEO-level annual \"How We Build Software\" strategy exercise, identifying GenAI and cyber solutioning gaps and shaping the next year's initiative scope.",
+      "Set direction for AI-assisted SDLC capabilities — code and PR review, headless test-case generation, technical documentation and engineering workflows — with evaluation, observability and security controls.",
+      "Aligned team size, skill mix and hiring plans with the upcoming year's delivery demand, working with internal and external stakeholders.",
     ],
-    recognition: "CTO TechX Award 2026 · Icons of Excellence 2025",
+    recognition: "TechX Award 2026",
   },
   {
     company: "Capital One",
-    role: "Senior Manager, Generative AI Initiatives",
-    period: "2023 — 2026",
-    location: "Bengaluru / Global",
+    role: "Senior Manager, GenAI Initiatives",
+    period: "Aug 2023 — Aug 2026",
+    location: "Bengaluru, India",
     points: [
-      "Built and scaled AI-assisted software engineering capabilities reaching 16,000+ engineers across the enterprise.",
-      "Led 0→1 development and enterprise adoption of AI products: code review, test-case generation, documentation, risk-impact analysis and developer knowledge support.",
-      "Established reusable architecture patterns for RAG, semantic retrieval, reranking and LLM-powered engineering workflows.",
-      "Led technology evaluation, security and operational readiness, and enterprise rollout of AI coding assistants (Claude Code, Cursor, Windsurf, Code Rabbit) across global engineering orgs.",
-      "Partnered with senior US technology leadership to define AI engineering strategy and scale successful initiatives.",
+      "Scaled AI developer tools — Windsurf, Claude Code, Cowork and Codex — to 30,000+ users, with access controls, identity integration, token limits, sensitive-data guardrails and OpenTelemetry productivity telemetry.",
+      "Built and scaled an agentic code-review platform from scratch to 50,000+ repositories and 350K+ pull requests per month, at under $4 median cost per PR.",
+      "Built a GenAI developer assistant chatbot adopted by 15,000+ engineers.",
+      "Led development of DeX, a multi-tenant agentic RAG chatbot grounded in product documentation and historical Slack conversations; scaled to 70+ platforms, serving 90% of queries and resolving 80% of repeated queries.",
+      "Architected a production RAG knowledge platform on AWS EKS with OpenSearch, semantic retrieval, reranking and LLMs.",
+      "Secured enterprise LLM access by integrating Claude Code with AWS Bedrock via API Gateway and OAuth, and led the evaluation and launch of Windsurf with cybersecurity, risk and compliance.",
+      "Led headless AI initiatives for test-case generation, code review, documentation refresh and change risk-impact analysis.",
     ],
     recognition: "Achievers Award 2024 · GenAI Hackathon 2024, 2nd Prize",
   },
   {
     company: "Paytm",
-    role: "Senior Engineering Manager",
+    role: "Senior Engineering Manager, Central Data",
     period: "2021 — 2023",
-    location: "Bengaluru / Noida",
+    location: "Noida, India",
     points: [
-      "Led cloud infrastructure, platform engineering, DevOps/SRE and engineering automation initiatives.",
-      "Delivered $1.8M+ annualized savings through cloud optimization, infrastructure modernization and automation.",
-      "Automated JIRA-driven infrastructure provisioning — turnaround cut from days to ~1 hour, saving 10+ developer-hours per request.",
-      "Automated access management — turnaround cut from 2–7 days to ~10 minutes.",
-      "Migrated an EC2-based Hive environment to a Kubernetes-based Presto platform; modernized identity from OpenLDAP to SAML.",
+      "Led SRE, DevOps and platform engineering for central data platforms totalling 55PB, including a 15PB data warehouse, and owned business-unit vision, P&L, cost and resource planning.",
+      "Delivered $1.8M+ monthly savings through cloud modernization, compute migration, data-transfer optimization and automated cost controls.",
+      "Modernized the data platform from Hadoop/Hive on EC2 to Kubernetes-based Presto on EKS, self-managed Kafka to managed Kafka, and long-running EMR workloads to transient/serverless EMR.",
+      "Automated JIRA-driven provisioning (days to about one hour) and access management (2–7 days to about 10 minutes); cut patch-cycle turnaround from about three months to one week.",
+      "Built Kubeflow MLOps pipelines and supported GPU-backed OCR workloads; introduced Databricks and managed data-lake access and governance.",
     ],
     recognition: "Hall of Fame 2023",
   },
   {
     company: "Coforge",
-    role: "DevOps Specialist",
+    role: "Specialist",
     period: "2021",
     location: "India",
     points: [
-      "Delivered cloud, DevOps, infrastructure automation and platform engineering capabilities across enterprise environments.",
-      "Supported modernization of engineering and operational workflows through automation and reliability improvements.",
+      "Led development, DevOps and QA teams on a mainframe-to-microservices transformation for Sabre's travel Global Distribution System.",
+      "Established cloud-native delivery foundations on GCP, with CI/CD, infrastructure automation, observability and security scanning.",
     ],
   },
   {
     company: "Mobileum",
-    role: "Project Lead / Technical Lead, SRE",
+    role: "Technical Lead",
     period: "2015 — 2021",
-    location: "Gurgaon",
+    location: "Gurgaon, India",
     points: [
-      "Led SRE, cloud, DevOps and reliability engineering initiatives supporting Telia Group across Nordic & European markets.",
-      "Drove production reliability, automation, security and infrastructure modernization across distributed production environments.",
+      "Led cloud, SRE and DevOps strategy for Telia Group and other European telecom operators across Nordic markets, owning reliability, automation, security and cost planning.",
+      "Ran SLO/SLA-driven operations using MTTA, MTTR and RPO/RTO practices across multi-country services, and owned client stakeholder management.",
+      "Deployed releases on AWS and GCP (EKS, GKE, ECS, VMs) with Jenkins CI/CD, Ansible and shell automation; set up observability with ELK, Nagios, Prometheus and Grafana.",
     ],
     recognition: "MVP Award 2019",
   },
   {
     company: "Earlier Career",
-    role: "Tecnotree · Huawei Enterprise · Quadgen Wireless · Ericsson",
+    role: "Tecnotree · Huawei Enterprise · QuadGen Wireless · Ericsson",
     period: "2010 — 2015",
     location: "India",
     points: [
-      "Built foundational depth across OS/DB administration, billing & mediation systems, telecom platforms and infrastructure operations — the groundwork for a 16-year climb into platform and AI engineering leadership.",
+      "Built foundational depth across OS and database administration, billing and mediation systems, telecom platforms and infrastructure operations.",
     ],
   },
 ];
@@ -185,22 +195,22 @@ export const impactHighlights = [
   {
     title: "AI Engineering at Enterprise Scale",
     description:
-      "Scaled AI-assisted software engineering to 16,000+ engineers — spanning code review, test generation, documentation, knowledge retrieval and developer productivity.",
+      "Scaled AI developer tools to 30,000+ users, and a GenAI developer assistant adopted by 15,000+ engineers — spanning code review, test generation, documentation and knowledge retrieval.",
   },
   {
     title: "Enterprise AI Knowledge Platform",
     description:
-      "Architected a production platform combining EKS, OpenSearch, semantic retrieval, reranking, LLMs and organizational support knowledge to improve engineering knowledge discovery.",
+      "Architected a production platform combining EKS, OpenSearch, semantic retrieval, reranking and LLMs to improve engineering knowledge discovery across 70+ platforms.",
   },
   {
     title: "Cloud Cost Transformation",
     description:
-      "Delivered $1.8M+ annualized savings through cloud optimization, infrastructure modernization, cost intelligence and automation.",
+      "Delivered $1.8M+ monthly savings through cloud modernization, compute migration, data-transfer optimization and automated cost controls.",
   },
   {
     title: "Engineering Automation",
     description:
-      "Automated infrastructure provisioning, access management and patch management — cutting operational processes from days/months to minutes/weeks.",
+      "Automated infrastructure provisioning, access management and patch management — cutting operational processes from days or months to minutes or weeks.",
   },
   {
     title: "Platform Modernization",
@@ -210,7 +220,7 @@ export const impactHighlights = [
 ];
 
 export const recognition = [
-  { title: "CTO TechX Award 2026", org: "Capital One" },
+  { title: "TechX Award 2026", org: "Capital One" },
   { title: "Icons of Excellence 2025", org: "Capital One" },
   { title: "Achievers Award 2024", org: "Capital One" },
   { title: "GenAI Hackathon 2024 — 2nd Prize", org: "Capital One" },
@@ -221,7 +231,7 @@ export const recognition = [
 export const education = [
   {
     title: "B.E. Electronics & Communication Engineering",
-    org: "Maharshi Dayanand University",
+    org: "B.R.C.M College of Engineering and Technology · Maharshi Dayanand University",
     period: "2005 — 2009",
   },
   {
@@ -282,12 +292,12 @@ export const blogPosts: BlogPost[] = [
     slug: "moving-genai-from-poc-to-production",
     title: "Moving GenAI from POC to Production: What Actually Breaks",
     excerpt:
-      "Enterprise GenAI demos are easy. Production is where governance, evaluation and reliability either hold — or don't. Notes from scaling AI tooling to 16,000+ engineers.",
+      "Enterprise GenAI demos are easy. Production is where governance, evaluation and reliability either hold — or don't. Notes from scaling AI tooling to 30,000+ users.",
     date: "2026-09-10",
     readTime: "6 min read",
     tags: ["GenAI", "Platform Engineering", "Enterprise AI"],
     content: [
-      "Every org I've worked with can produce an impressive GenAI demo in a week. Almost none can take that same capability to 16,000 engineers without it falling over — on cost, on security review, or on trust.",
+      "Every org I've worked with can produce an impressive GenAI demo in a week. Almost none can take that same capability to 30,000 users without it falling over — on cost, on security review, or on trust.",
       "The gap isn't model capability. It's the unglamorous layer underneath: evaluation harnesses that catch regressions before users do, retrieval pipelines that don't silently degrade as knowledge sources drift, and access/governance controls that satisfy risk and compliance without strangling iteration speed.",
       "This is a placeholder post — replace with your own write-up on what broke, what you fixed, and what you'd do differently next time.",
     ],
