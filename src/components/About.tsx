@@ -8,8 +8,8 @@ export default function About() {
   return (
     <section id="about" className="mx-auto max-w-6xl px-6 py-28">
       <SectionHeading
-        eyebrow="About"
-        title="Strategy at the top, hands dirty underneath."
+        eyebrow="The short version"
+        title="An operator who has done it — not a slide deck."
       />
 
       <div className="grid lg:grid-cols-5 gap-12">

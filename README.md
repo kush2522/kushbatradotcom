@@ -1,15 +1,23 @@
-# Kush Batra — Portfolio Site
+# kushbatra.com — GenAI Consulting & Training
 
-Dark, AI/tech-themed personal site built with Next.js 14 (App Router), TypeScript, Tailwind CSS and Framer Motion.
 
 ## Structure
 
-- `src/data/profile.ts` — **single source of truth** for all content: bio, experience, skills, demo projects, blog posts. Edit this file to update the site.
-- `src/app/page.tsx` — homepage (hero, about, experience, impact, recognition, contact)
-- `src/app/demos` — product demo showcase (add a `videoUrl` per entry in `profile.ts` to embed a YouTube/Loom player; leave blank for a "coming soon" card)
-- `src/app/video-resume` — video resume page (set `VIDEO_RESUME_URL` in that file once recorded)
-- `src/app/blog` — blog list + `[slug]` post pages, driven by `blogPosts` in `profile.ts`
-- `public/resume.pdf` — downloadable resume (swap this file to update the download)
+Consulting & training site for Kush Batra — Next.js 15 (App Router), TypeScript, Tailwind CSS, Framer Motion.
+
+- `src/data/profile.ts` — identity, contact details, career history, awards
+- `src/data/consulting.ts` — services, engagement models, training programs, case studies, FAQs, **booking link**
+- `src/data/blog.ts` — Insights posts (blocks: `## heading`, `- bullet`, `> quote`, plain paragraph)
+- Pages: `/` · `/services` · `/training` · `/case-studies` · `/about` · `/blog` · `/contact`
+- Old `/demos` and `/video-resume` URLs redirect (see `next.config.mjs`)
+
+## Booking calls (Google Calendar)
+
+1. In Google Calendar: **Create → Appointment schedule**, set a 30-min slot, availability and a Google Meet link.
+2. Open the schedule → **Share** → copy the booking-page link.
+3. In Vercel → Project → Settings → Environment Variables add `NEXT_PUBLIC_BOOKING_URL` = that link (or paste it into `BOOKING_URL` in `src/data/consulting.ts`) and redeploy.
+
+Until it's set, "Book a call" buttons open a pre-filled Google Calendar invite addressed to er.kushbatra@gmail.com, so visitors can still send you an invite.
 
 ## Local development
 
@@ -22,10 +30,9 @@ Visit http://localhost:3000.
 
 ## Updating content
 
-- **Add a demo video:** edit `demoProjects` in `src/data/profile.ts`, set `videoUrl` to a YouTube embed URL (`https://www.youtube.com/embed/VIDEO_ID`) or Loom embed URL, and `status: "live"`.
-- **Add the video resume:** edit `VIDEO_RESUME_URL` in `src/app/video-resume/page.tsx`.
-- **Write a blog post:** add an entry to `blogPosts` in `src/data/profile.ts` (slug, title, excerpt, date, tags, content paragraphs).
-- **Update the downloadable resume:** replace `public/resume.pdf`.
+- **Services / training / case studies / FAQs:** edit `src/data/consulting.ts`.
+- **Write a post:** add an entry to `blogPosts` in `src/data/blog.ts`.
+- **Contact details:** edit `profile` in `src/data/profile.ts`.
 
 ## Deployment
 
@@ -39,4 +46,4 @@ Visit http://localhost:3000.
 - Backups if taken: `kushbatra.dev`, `heykush.com`.
 - Point the domain's DNS to Vercel per their custom-domain instructions (two CNAME/A records).
 
-Total estimated cost: **~$10/year** (domain only — hosting is free on Vercel's Hobby tier for a personal/non-commercial site).
+Note: Vercel's Hobby tier is for non-commercial use. A consulting site that sells services should run on Vercel Pro.

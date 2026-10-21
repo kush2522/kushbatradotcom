@@ -1,10 +1,10 @@
 import type { MetadataRoute } from "next";
-import { blogPosts } from "@/data/profile";
+import { blogPosts } from "@/data/blog";
 
 const BASE_URL = "https://kushbatra.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/demos", "/video-resume", "/blog"].map(
+  const staticRoutes = ["", "/services", "/training", "/case-studies", "/about", "/blog", "/contact"].map(
     (route) => ({
       url: `${BASE_URL}${route}`,
       lastModified: new Date(),
