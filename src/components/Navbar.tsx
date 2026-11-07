@@ -106,10 +106,10 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href="/contact#proposal"
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-cyan via-accent-blue to-accent-violet px-4 py-2 text-sm font-medium text-ink-950 hover:scale-[1.03] transition-transform"
           >
-            <CalendarDays size={15} /> Book a call
+            <CalendarDays size={15} /> Get a proposal
           </Link>
         </div>
 

@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { CalendarDays, CalendarPlus, Clock, Linkedin, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
@@ -22,8 +23,8 @@ export default function ContactPage() {
     <>
       <PageHeader
         eyebrow="Contact"
-        title="Book a call, or just say hello."
-        description="The first call is free and takes 30 minutes. We'll talk about your context and whether I'm the right person to help."
+        title="Get a scoped proposal in 48 hours."
+        description="Tell me what you need, or book a free 30-minute call. Either way you'll get a written scope, timeline and fixed or capped price."
       />
 
       <section className="mx-auto max-w-6xl px-6 pb-12">
@@ -82,11 +83,13 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 pb-12 grid lg:grid-cols-5 gap-6">
+      <section id="proposal" className="scroll-mt-24 mx-auto max-w-6xl px-6 pb-12 grid lg:grid-cols-5 gap-6">
         <div className="lg:col-span-3 card-glass rounded-3xl p-7 sm:p-10">
-          <h2 className="font-display text-xl text-mist-100">Tell me about your project</h2>
+          <h2 className="font-display text-xl text-mist-100">Request a proposal</h2>
           <p className="mt-2 mb-6 text-sm text-mist-400">A few lines is plenty. I&apos;ll come back with questions or a time to talk.</p>
-          <ContactForm />
+          <Suspense fallback={null}>
+            <ContactForm />
+          </Suspense>
         </div>
         <div className="lg:col-span-2 space-y-4">
           {contacts.map((c) => (

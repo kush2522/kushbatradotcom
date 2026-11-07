@@ -23,7 +23,7 @@ export default function BookCTA({
           <p className="mt-4 text-mist-400 max-w-xl mx-auto">{text}</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
-              href="/contact"
+              href="/contact#proposal"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-cyan via-accent-blue to-accent-violet px-6 py-3 text-sm font-medium text-ink-950 hover:scale-[1.03] transition-transform"
             >
               <CalendarDays size={16} /> Book a call
