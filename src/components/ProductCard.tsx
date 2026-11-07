@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, BookOpen, PlayCircle } from "lucide-react";
 import type { Product } from "@/data/products";
+import { contactHref } from "@/data/topics";
 
 export default function ProductCard({ p }: { p: Product }) {
   return (
@@ -25,6 +26,14 @@ export default function ProductCard({ p }: { p: Product }) {
         >
           <PlayCircle size={15} /> Live demo
         </a>
+        {p.status === "Sign-in required" && (
+          <Link
+            href={contactHref("Product demo or access request")}
+            className="inline-flex items-center gap-1.5 rounded-full border border-white/15 px-4 py-2 text-mist-200 hover:bg-white/5 transition-colors"
+          >
+            Request access
+          </Link>
+        )}
         <Link
           href={`/products/${p.slug}#docs`}
           className="inline-flex items-center gap-1.5 rounded-full border border-white/15 px-4 py-2 text-mist-200 hover:bg-white/5 transition-colors"

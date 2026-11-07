@@ -33,8 +33,8 @@ export default function Hero() {
           {...fade(0.1)}
           className="font-display text-4xl sm:text-6xl lg:text-7xl font-medium leading-[1.05] tracking-tight text-mist-100 max-w-4xl"
         >
-          Take generative AI from pilot to{" "}
-          <span className="text-gradient">governed production</span>.
+          AI strategy, agents and delivery,{" "}
+          <span className="text-gradient">governed for production</span>.
         </motion.h1>
 
         <motion.p {...fade(0.2)} className="mt-6 max-w-2xl text-lg text-mist-300 leading-relaxed">
@@ -43,17 +43,17 @@ export default function Hero() {
 
         <motion.div {...fade(0.3)} className="mt-10 flex flex-wrap gap-4">
           <Link
-            href="/contact"
+            href="/contact#proposal"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-cyan via-accent-blue to-accent-violet px-6 py-3 text-sm font-medium text-ink-950 transition-transform hover:scale-[1.03]"
           >
             <CalendarDays size={16} />
-            Book a free 30-min call
+            Get a proposal in 48 hours
           </Link>
           <Link
-            href="/services"
+            href="/offerings"
             className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-mist-200 hover:bg-white/5 transition-colors"
           >
-            See how I help
+            See offerings and demos
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </Link>
         </motion.div>

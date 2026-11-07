@@ -1,7 +1,6 @@
 // Products (live subdomains) and portal offerings. Edit here; pages read from this file.
 // Docs live on this site (/products/[slug]#docs). Set `docsUrl` to point at an external docs site instead.
 
-import { calendarInviteUrl } from "./consulting";
 
 export type Product = {
   slug: string;
@@ -223,4 +222,27 @@ export const offerings: Offering[] = [
 
 export const productBySlug = (slug: string) => products.find((p) => p.slug === slug);
 export const offeringBySlug = (slug: string) => offerings.find((o) => o.slug === slug);
-export const walkthroughHref = (topic: string) => calendarInviteUrl(topic);
+
+export const packages = [
+  {
+    title: "AI coding agents readiness assessment",
+    length: "2 weeks · fixed fee",
+    text: "A clear view of whether, where and how to roll out coding agents in your organisation.",
+    outputs: ["Security and data-classification review", "Tool and model shortlist", "Rollout roadmap and cost model"],
+    topic: "Technology strategy and AI advisory",
+  },
+  {
+    title: "Model and harness evaluation",
+    length: "2–3 weeks · fixed fee",
+    text: "Claude Code, Codex and other tools compared on your own stories, with evidence rather than opinion.",
+    outputs: ["Side-by-side runs on your work", "Quality, cost and speed findings", "Recommendation and next steps"],
+    topic: "Technology strategy and AI advisory",
+  },
+  {
+    title: "AI governance and cost baseline",
+    length: "3–4 weeks · fixed fee",
+    text: "Know what you spend, who has access and what is logged, then set the controls.",
+    outputs: ["Cloud and model spend baseline", "Identity, audit-log and retention design", "Team budgets and sizing"],
+    topic: "Cost and AI governance",
+  },
+];

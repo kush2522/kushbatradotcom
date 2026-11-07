@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, BookOpen, Check, PlayCircle } from "lucide-react";
 import BookCTA from "@/components/BookCTA";
 import { offeringBySlug, productBySlug, products } from "@/data/products";
+import { contactHref } from "@/data/topics";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -44,6 +45,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           >
             <PlayCircle size={16} /> Open live demo
           </a>
+          {p.status === "Sign-in required" && (
+            <Link
+              href={contactHref("Product demo or access request")}
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-mist-200 hover:bg-white/5 transition-colors"
+            >
+              Request access
+            </Link>
+          )}
           <Link
             href="#docs"
             className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-mist-200 hover:bg-white/5 transition-colors"

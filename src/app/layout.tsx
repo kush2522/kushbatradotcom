@@ -3,6 +3,8 @@ import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import StickyCTA from "@/components/StickyCTA";
+import { Analytics } from "@vercel/analytics/next";
 import { profile } from "@/data/profile";
 
 const spaceGrotesk = Space_Grotesk({
@@ -25,7 +27,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 const siteTitle = `${profile.name} — ${profile.title}`;
 const siteDescription =
-  "Enterprise GenAI consulting and training: AI coding agents rollout (Claude Code, Codex, Cursor), agentic RAG platforms, AI governance and LLM cost control. Former Director of GenAI & Engineering at Capital One.";
+  "AI strategy, agentic ecosystems, software factory and DevOps, cloud, data platforms, AI governance and managed engineering. Live demos for every offering. Former Director of GenAI & Engineering at Capital One.";
 
 export const metadata: Metadata = {
   title: { default: siteTitle, template: `%s — ${profile.name}` },
@@ -94,6 +96,8 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1 relative z-10">{children}</main>
         <Footer />
+        <StickyCTA />
+        <Analytics />
       </body>
     </html>
   );
