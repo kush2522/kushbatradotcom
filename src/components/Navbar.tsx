@@ -3,11 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { CalendarDays, Menu, X } from "lucide-react";
+import { CalendarDays, ChevronDown, Menu, X } from "lucide-react";
 import { profile } from "@/data/profile";
+import { products } from "@/data/products";
+
+const productLinks = products.map((p) => ({ href: `/products/${p.slug}`, label: p.name }));
 
 const links = [
-  { href: "/services", label: "Services" },
+  { href: "/offerings", label: "Offerings" },
   { href: "/training", label: "Training" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/blog", label: "Insights" },
@@ -54,7 +57,44 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden md:flex items-center gap-7 text-sm text-mist-300">
-          {links.map((l) => (
+          {links.slice(0, 1).map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className={`transition-colors hover:text-mist-100 ${
+                isActive(l.href) ? "text-mist-100" : ""
+              }`}
+            >
+              {l.label}
+            </Link>
+          ))}
+          <div className="relative group">
+            <Link
+              href="/products"
+              className={`inline-flex items-center gap-1 transition-colors hover:text-mist-100 ${
+                isActive("/products") ? "text-mist-100" : ""
+              }`}
+            >
+              Products <ChevronDown size={14} />
+            </Link>
+            <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-opacity absolute left-1/2 -translate-x-1/2 top-full pt-3">
+              <div className="w-64 rounded-xl border border-white/10 bg-ink-900/95 backdrop-blur-lg p-2 shadow-xl">
+                {productLinks.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    className="block rounded-lg px-3 py-2 hover:bg-white/5 hover:text-mist-100"
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+                <Link href="/products" className="block rounded-lg px-3 py-2 text-xs text-accent-cyan hover:bg-white/5">
+                  All products, demos and docs
+                </Link>
+              </div>
+            </div>
+          </div>
+          {links.slice(1).map((l) => (
             <Link
               key={l.href}
               href={l.href}
@@ -84,11 +124,11 @@ export default function Navbar() {
 
       {open && (
         <div className="md:hidden border-t border-white/5 px-6 py-4 flex flex-col gap-4 text-sm text-mist-300">
-          {links.map((l) => (
+          {[links[0], { href: "/products", label: "Products" }, ...productLinks.map((l) => ({ ...l, sub: true })), ...links.slice(1)].map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="hover:text-mist-100 transition-colors"
+              className={`hover:text-mist-100 transition-colors ${"sub" in l ? "pl-4 text-mist-400" : ""}`}
               onClick={() => setOpen(false)}
             >
               {l.label}

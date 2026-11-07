@@ -7,7 +7,9 @@ import SectionHeading from "@/components/SectionHeading";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import BookCTA from "@/components/BookCTA";
 import { caseStudies, processSteps, trainingPrograms } from "@/data/consulting";
+import ProductCard from "@/components/ProductCard";
 import { blogPosts } from "@/data/blog";
+import { products } from "@/data/products";
 
 const differentiators = [
   {
@@ -34,6 +36,23 @@ export default function Home() {
       <Hero />
       <Stats />
       <ServicesGrid />
+
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <SectionHeading
+            eyebrow="Products"
+            title="Live products, each with a demo and docs."
+          />
+          <Link href="/products" className="mb-14 text-sm text-mist-300 hover:text-accent-cyan inline-flex items-center gap-1">
+            All products <ArrowUpRight size={15} />
+          </Link>
+        </div>
+        <div className="grid md:grid-cols-2 gap-5">
+          {products.map((p) => (
+            <ProductCard key={p.slug} p={p} />
+          ))}
+        </div>
+      </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeading eyebrow="Why me" title="Advice from someone who has carried the pager." />

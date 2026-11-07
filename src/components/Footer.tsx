@@ -1,15 +1,23 @@
 import Link from "next/link";
 import { Linkedin, Mail, Phone } from "lucide-react";
 import { profile } from "@/data/profile";
+import { products } from "@/data/products";
 
 const cols = [
   {
     title: "Work with me",
     links: [
+      { href: "/offerings", label: "Offerings" },
       { href: "/services", label: "Services" },
       { href: "/training", label: "Training" },
       { href: "/case-studies", label: "Case studies" },
       { href: "/contact", label: "Book a call" },
+    ],
+  },
+  {
+    title: "Products",
+    links: [
+      ...products.map((p) => ({ href: `/products/${p.slug}`, label: p.name })),
     ],
   },
   {
@@ -24,7 +32,7 @@ const cols = [
 export default function Footer() {
   return (
     <footer className="relative z-10 border-t border-white/5 mt-12">
-      <div className="mx-auto max-w-6xl px-6 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 text-sm">
+      <div className="mx-auto max-w-6xl px-6 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-5 text-sm">
         <div className="lg:col-span-2">
           <p className="font-display text-mist-100">{profile.name}</p>
           <p className="mt-1 text-mist-400">{profile.title}</p>

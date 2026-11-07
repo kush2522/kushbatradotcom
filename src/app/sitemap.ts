@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blog";
+import { products } from "@/data/products";
 
 const BASE_URL = "https://kushbatra.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/services", "/training", "/case-studies", "/about", "/blog", "/contact"].map(
+  const staticRoutes = ["", "/offerings", "/products", "/services", "/training", "/case-studies", "/about", "/blog", "/contact"].map(
     (route) => ({
       url: `${BASE_URL}${route}`,
       lastModified: new Date(),
@@ -16,5 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(post.date),
   }));
 
-  return [...staticRoutes, ...postRoutes];
+  const productRoutes = products.map((p) => ({
+    url: `${BASE_URL}/products/${p.slug}`,
+    lastModified: new Date(),
+  }));
+
+  return [...staticRoutes, ...productRoutes, ...postRoutes];
 }
